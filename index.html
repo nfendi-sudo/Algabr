@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>المرجع الألماسي - الأعداد والحساب - منصة نوفل</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:wght@400;700&display=swap');
+        
+        :root { --main-blue: #0f172a; --gold: #b45309; --emerald: #059669; }
+        body { font-family: 'Cairo', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.8; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: auto; background: white; padding: 50px; border-radius: 25px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1); }
+        
+        /* العناوين */
+        .mega-header { background: var(--main-blue); color: white; padding: 40px; text-align: center; border-radius: 20px; margin-bottom: 50px; border-bottom: 8px solid var(--gold); }
+        .mega-header h1 { font-family: 'Amiri', serif; font-size: 3.5em; margin: 0; color: #fbbf24; }
+        h2 { color: var(--main-blue); font-size: 2.2em; border-right: 8px solid var(--gold); padding-right: 15px; margin-top: 60px; background: #f1f5f9; padding: 10px 15px; }
+        h3 { color: var(--gold); border-bottom: 2px solid #e2e8f0; margin-top: 30px; }
+
+        /* البطاقات التعليمية */
+        .detail-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 15px; padding: 25px; margin: 20px 0; position: relative; }
+        .property-title { background: var(--main-blue); color: white; padding: 5px 15px; border-radius: 8px; font-size: 0.9em; display: inline-block; margin-bottom: 10px; }
+        
+        .math-box { background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; font-size: 1.5em; color: #000; }
+        
+        .proof-box { background: #fffbeb; border-right: 5px solid #d97706; padding: 20px; margin: 20px 0; font-style: italic; }
+        .example-box { background: #f0fdf4; border-right: 5px solid var(--emerald); padding: 20px; margin: 20px 0; }
+        
+        .warning-box { background: #fef2f2; border: 1px solid #fee2e2; border-right: 5px solid #dc2626; padding: 20px; border-radius: 10px; color: #991b1b; }
+
+        .method-step { display: flex; align-items: flex-start; margin-bottom: 15px; }
+        .step-num { background: var(--gold); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: 15px; flex-shrink: 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="mega-header">
+        <h1>المرجع الكامل في الأعداد والحساب</h1>
+        <p>من الصفر إلى الاحتراف - مخصص لشعبتي الرياضيات والتقني رياضي</p>
+    </div>
+
+    <div class="section">
+        <h2>I. قابلية القسمة في \( \mathbb{Z} \)</h2>
+        
+        <h3>1. التعريف الرياضي الدقيق</h3>
+        <p>ليكن \( a \) و \( b \) عددين صحيحين. نقول إن \( a \) يقسم \( b \) (ونكتب \( a \mid b \)) إذا وفقط إذا وجد عدد صحيح \( k \) بحيث:</p>
+        <div class="math-box">\[ b = a \times k \]</div>
+        
+        <h3>2. خواص قابلية القسمة (التفاصيل المملة)</h3>
+        <div class="detail-card">
+            <span class="property-title">خاصية 01: التعدي (Transitivité)</span>
+            <p>إذا كان \( a \mid b \) و \( b \mid c \) فإن \( a \mid c \).</p>
+        </div>
+        <div class="detail-card">
+            <span class="property-title">خاصية 02: التآلف الخطية (Combinaison linéaire)</span>
+            <p>إذا كان \( a \mid b \) و \( a \mid c \) فإن \( a \) يقسم كل عدد من الشكل \( (mb + nc) \) حيث \( m, n \in \mathbb{Z} \).</p>
+            <div class="proof-box">هذه الخاصية هي أساس "طريقة التخلص من المجهول n" في تمارين البكالوريا.</div>
+        </div>
+
+        <h3>3. القسمة الإقليدية في \( \mathbb{Z} \)</h3>
+        <p>من أجل كل \( a \in \mathbb{Z} \) و \( b \in \mathbb{Z}^* \)، يوجد زوج وحيد \( (q, r) \) من الأعداد الصحيحة بحيث:</p>
+        <div class="math-box">\[ a = bq + r \quad \text{مع} \quad 0 \le r < |b| \]</div>
+        <div class="warning-box">
+            <strong>تنبيه قاتل:</strong> الباقي \( r \) لا يمكن أن يكون سالباً أبداً. إذا وجدت في حساباتك باقيًا سالبًا، أضف له القاسم \( b \) ليصبح موجباً.
+        </div>
+        
+    </div>
+
+    <div class="section">
+        <h2>II. الموافقات بترديد \( n \)</h2>
+        
+        <h3>1. المفهوم والتعريف</h3>
+        <p>ليكن \( n \) عدداً طبيعياً أكبر من 1. نقول إن \( a \) يوافق \( b \) بترديد \( n \) إذا كان للعددين نفس الباقي في القسمة على \( n \).</p>
+        <div class="math-box">\[ a \equiv b \pmod{n} \iff (a - b) \text{ يقبل القسمة على } n \]</div>
+
+        <h3>2. الخواص الجبرية للموافقات</h3>
+        <div class="detail-card">
+            <p><strong>أ. التلاؤم مع الجمع والضرب:</strong> إذا كان \( a \equiv b [n] \) و \( c \equiv d [n] \) فإن:</p>
+            <ul>
+                <li>\( a + c \equiv b + d [n] \)</li>
+                <li>\( a \times c \equiv b \times d [n] \)</li>
+            </ul>
+        </div>
+        <div class="detail-card">
+            <p><strong>ب. التلاؤم مع القوى (خاصية الحساب):</strong> إذا كان \( a \equiv b [n] \) فإن:</p>
+            <div class="math-box">\[ a^k \equiv b^k [n] \]</div>
+            <p>تستخدم هذه الخاصية لدراسة "دورية البواقي" للأعداد الكبيرة.</p>
+        </div>
+
+        <div class="example-box">
+            <strong>مثال منهجي:</strong> دراسة بواقي \( 4^n \) على 9.
+            <div class="method-step"><div class="step-num">1</div><div>نبدأ بـ \( n=0 \): \( 4^0 = 1 \equiv 1 [9] \)</div></div>
+            <div class="method-step"><div class="step-num">2</div><div>من أجل \( n=1 \): \( 4^1 = 4 \equiv 4 [9] \)</div></div>
+            <div class="method-step"><div class="step-num">3</div><div>من أجل \( n=2 \): \( 4^2 = 16 \equiv 7 [9] \)</div></div>
+            <div class="method-step"><div class="step-num">4</div><div>من أجل \( n=3 \): \( 4^3 = 64 \equiv 1 [9] \) (عدنا للواحد، إذن الدور هو 3)</div></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>III. القواسم والمضاعفات (PGCD & PPCM)</h2>
+        
+        <h3>1. القاسم المشترك الأكبر \( PGCD \)</h3>
+        <p>هو أكبر عدد طبيعي يقسم \( a \) و \( b \). خواصه:</p>
+        <ul>
+            <li>\( PGCD(a, b) = PGCD(b, a) \)</li>
+            <li>\( PGCD(a, 1) = 1 \)</li>
+            <li>\( PGCD(a, 0) = |a| \)</li>
+            <li>إذا كان \( k > 0 \)، فإن \( PGCD(ka, kb) = k \cdot PGCD(a, b) \)</li>
+        </ul>
+
+        <h3>2. مبرهنة بيزو (Théorème de Bézout)</h3>
+        <div class="math-box">\[ PGCD(a, b) = d \iff \exists (u, v) \in \mathbb{Z}^2 : au + bv = d \]</div>
+        <p><strong>حالة خاصة:</strong> يكون \( a \) و \( b \) أوليين فيما بينهما إذا وفقط إذا وجد \( u, v \) بحيث \( au + bv = 1 \).</p>
+
+        <h3>3. مبرهنة غوص (Théorème de Gauss)</h3>
+        <div class="math-box">\[ \text{إذا كان } a \mid bc \text{ و } PGCD(a, b) = 1 \text{ فإن } a \mid c \]</div>
+        <div class="warning-box"><strong>شرط غوص:</strong> لا يمكن تطبيق المبرهنة إلا إذا أثبتّ أولاً أن \( a \) و \( b \) أوليان فيما بينهما.</div>
+        
+    </div>
+
+    <div class="section">
+        <h2>IV. أنظمة التعداد (Systèmes de Numération)</h2>
+        <p>كتابة عدد في نظام ذو أساس \( x \) تعني تفكيكه حسب قوى \( x \).</p>
+        <div class="math-box">\[ \overline{a_n a_{n-1} \dots a_0}^x = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0 x^0 \]</div>
+        <div class="example-box">
+            <strong>مثال:</strong> تحويل \( \overline{123}^5 \) إلى النظام العشري:
+            <br> \( 1 \times 5^2 + 2 \times 5^1 + 3 \times 5^0 = 25 + 10 + 3 = 38 \).
+        </div>
+    </div>
+
+    <div class="mega-header" style="background: #f1f5f9; color: var(--main-blue); border: 2px solid var(--gold);">
+        <p style="font-weight: bold;">"الطريق إلى الـ 20 في الرياضيات يبدأ بفهم هذه التفاصيل دقة بدقة."</p>
+        <p>بالتوفيق لطلبة منصة نوفل </p>
+    </div>
+</div>
+
+</body>
+</html>
